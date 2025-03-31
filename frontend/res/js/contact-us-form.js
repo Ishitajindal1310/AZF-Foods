@@ -10,16 +10,14 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
 		location: document.getElementById("Location").value,
 		notes: document.getElementById("notes").value,
 	};
-
 	try {
-		const response = await fetch("http://127.0.0.1:8000/submit-form", {
+		const response = await fetch("https://azf-foods.vercel.app/submit-form", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(formData),
 		});
-
 		const result = await response.json();
 
 		if (response.ok) {
