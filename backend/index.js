@@ -8,7 +8,7 @@ const app = express();
 // app.use(cors());
 app.use(
 	cors({
-		origin: "https://azf-foods-5yq3.vercel.app/",
+		origin: "https://azf-foods-5yq3.vercel.app",
 		methods: ["POST"],
 		optionsSuccessStatus: 200,
 		credentials: true,
