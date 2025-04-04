@@ -175,20 +175,15 @@ nav {
 	display: flex;
 	overflow: hidden;
 	padding: 5rem 0;
-	/* transition: ease; */
 }
+
 .spices-img {
 	width: 20rem;
 	height: 20rem;
 	border-radius: 1rem;
-	margin: 0 1.5rem;
 	object-fit: cover;
+	margin: 0 2.5rem;
 }
-/* @keyframes rotate {
-	to {
-		transform: rotate(360deg);
-	}
-} */
 
 /* Spice Carousel (Old) */
 .spice-carousel {
@@ -227,21 +222,6 @@ nav {
 	} */
 }
 
-/* why choose us */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-}
-
-/* .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 40px 20px;
-} */
-
 .why-choose-us-container {
 	/* max-width: 1200px; */
 	margin: 0 auto;
@@ -265,15 +245,6 @@ nav {
 	color: #5a3e23;
 	margin-bottom: 40px;
 }
-
-/* .section-title .line {
-  display: inline-block;
-  width: 30px;
-  height: 1px;
-  background-color: #999;
-  margin-left: 10px;
-  vertical-align: middle;
-} */
 
 /* Content Layout */
 .content-wrapper {
@@ -396,7 +367,7 @@ nav {
 	}
 
 	.why-choose-us-container {
-		margin-top: 3rem;
+		margin-top: 0rem;
 		padding: 40px 20px;
 	}
 }
@@ -414,6 +385,11 @@ nav {
 	.nav-links {
 		width: 100%;
 		justify-content: center;
+	}
+
+	.spices-carousel {
+		padding: 2rem 0;
+		/* transition: ease; */
 	}
 	.spices-img {
 		width: 10rem;
@@ -455,7 +431,6 @@ nav {
 	}
 
 	.why-choose-us-container {
-		margin-top: 2rem;
 		padding: 40px 20px;
 	}
 }
@@ -463,6 +438,9 @@ nav {
 @media (max-width: 480px) {
 	.nav-links {
 		gap: 15px;
+	}
+	.spices-carousel {
+		padding: 1.25rem 0;
 	}
 	.spices-img {
 		width: 7.5rem;
