@@ -181,7 +181,7 @@ nav {
 	width: 20rem;
 	height: 20rem;
 	border-radius: 1rem;
-	margin: 0 1rem;
+	margin: 0 1.5rem;
 	object-fit: cover;
 }
 /* @keyframes rotate {
@@ -246,7 +246,7 @@ nav {
 	/* max-width: 1200px; */
 	margin: 0 auto;
 	/* margin-top: 15rem; */
-	margin-top: 5rem;
+	margin-top: 1rem;
 	padding: 40px 20px;
 }
 .why-choose-us-section {
