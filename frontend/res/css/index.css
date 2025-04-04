@@ -174,16 +174,15 @@ nav {
 .spices-carousel {
 	display: flex;
 	overflow: hidden;
+	padding: 5rem 0;
 	/* transition: ease; */
 }
-
 .spices-img {
 	width: 20rem;
 	height: 20rem;
-	border-radius: 50%;
-	/* box-shadow: inset 5px 5px 10px 10px black; */
+	border-radius: 1rem;
 	margin: 0 1rem;
-	/* animation: rotate 10s linear infinite; */
+	object-fit: cover;
 }
 /* @keyframes rotate {
 	to {
