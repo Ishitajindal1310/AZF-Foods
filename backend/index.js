@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 8000;
 // app.use(cors());
 app.use(
 	cors({
-		origin: process.env.SERVER_TYPE === "DEVELOPMENT" ? process.env.DEVELOPMENT_SERVER_URL : process.env.DEPLOYMENT_SERVER_URL,
+		// origin: process.env.SERVER_TYPE === "DEVELOPMENT" ? process.env.DEVELOPMENT_SERVER_URL : process.env.DEPLOYMENT_SERVER_URL,
+		origin: "https://azf-foods-5yq3.vercel.app",
 		methods: ["POST"],
 		optionsSuccessStatus: 200,
 		credentials: true,
