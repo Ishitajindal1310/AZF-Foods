@@ -1,9 +1,9 @@
 {
-	"name": "a2zdb",
+	"name": "azf",
 	"version": "1.0.0",
 	"description": "This is the backend server for A2Z Foods.",
 	"license": "ISC",
-	"author": "Aditya Pandey",
+	"author": "azf",
 	"type": "commonjs",
 	"main": "index.js",
 	"scripts": {

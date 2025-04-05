@@ -5,30 +5,30 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.json());
+const PORT = process.env.PORT || 8000;
+
 // app.use(cors());
 app.use(
 	cors({
-		origin: "https://azf-foods-5yq3.vercel.app",
+		origin: process.env.SERVER_TYPE === "DEVELOPMENT" ? process.env.DEVELOPMENT_SERVER_URL : process.env.DEPLOYMENT_SERVER_URL,
 		methods: ["POST"],
 		optionsSuccessStatus: 200,
 		credentials: true,
 	})
 );
-app.use(bodyParser.json());
-
-const PORT = process.env.PORT || 8000;
 
 mongoose
 	.connect(process.env.MONGO_URI)
-	.then(() => console.log("MongoDB Connected"))
-	.catch((err) => console.error("MongoDB Connection Error:", err));
+	.then(() => console.log("Connected to Database successfully"))
+	.catch((err) => console.error("Connection Failed. \nError:", err));
 
 const ContactSchema = new mongoose.Schema(
 	{
-		name: String,
+		fName: String,
+		lName: String,
+		email: String,
 		phone: String,
-		date: String,
-		time: String,
 		product: String,
 		location: String,
 		notes: String,
@@ -36,15 +36,15 @@ const ContactSchema = new mongoose.Schema(
 	{ timestamps: true }
 );
 
-const Contact = mongoose.model("Contact", ContactSchema);
+const ContactDetail = mongoose.model("ContactDetail", ContactSchema);
 
 app.get("/", (req, res) => {
-	res.send("Nothing to see here");
+	res.send("<h1>Nothing to see here</h1>");
 });
 
 app.post("/submit-form", async (req, res) => {
 	try {
-		const contactData = new Contact(req.body);
+		const contactData = new ContactDetail(req.body);
 		await contactData.save();
 		res.status(201).json({ message: "Form submitted successfully!" });
 	} catch (error) {
@@ -54,5 +54,5 @@ app.post("/submit-form", async (req, res) => {
 
 app.listen(PORT, () => {
 	// console.log(`Server is running on port ${PORT}`);
-	// console.log(`Server : http://localhost:${PORT}`);
+	console.log(`Server : http://127.0.0.1:${PORT}`);
 });
